@@ -1,0 +1,73 @@
+@use "../../styles" as *;
+
+.header {
+  padding: 40px 0;
+
+  .header__header {
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    color: $color1;
+    z-index: 2;
+    position: relative;
+  }
+
+  .header__form {
+    width: 500px;
+    position: relative;
+    display: flex;
+    margin: 20px auto;
+
+    @include maxWidth(991px) {
+      width: 80%;
+    }
+
+    @include maxWidth(767px) {
+      width: 90%;
+    }
+  }
+
+  .header__inputDiv {
+    width: 100%;
+  }
+
+  .header__input {
+    width: 100%;
+    font-family: "Balsamiq Sans", cursive;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+
+    &:focus {
+      background-color: white;
+      box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .header__submit {
+    position: absolute;
+    top: 0;
+    right: -2px;
+    height: 100%;
+  }
+
+  .header__button {
+    border-radius: 30px;
+    font-family: "Balsamiq Sans", cursive;
+    width: 80px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: $color1;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: darken($color1, 20%);
+      color: white;
+    }
+  }
+}
